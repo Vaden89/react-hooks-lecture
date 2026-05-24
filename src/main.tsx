@@ -8,6 +8,12 @@ import UseEffectPage from "./pages/presentation/UseEffectPage.tsx";
 import OverviewPage from "./pages/Overview.tsx";
 import { UseRefPage } from "./pages/presentation/UseRefPage.tsx";
 import UseContextPage from "./pages/presentation/UseContextPage.tsx";
+import CustomHooksPage from "./pages/presentation/CustomHooksPage.tsx";
+import UseReducerPage from "./pages/presentation/UseReducerPage.tsx";
+import ErrorBoundaryPage from "./pages/presentation/ErrorBoundaryPage.tsx";
+import UseHookPage from "./pages/presentation/UseHookPage.tsx";
+import UseActionStatePage from "./pages/presentation/UseActionStatePage.tsx";
+import UseOptimisticPage from "./pages/presentation/UseOptimisticPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +21,15 @@ const router = createBrowserRouter([
     Component: PresentationLayout,
     children: [
       { index: true, Component: OverviewPage },
-      { path: "/use-effect", Component: UseEffectPage },
       { path: "/use-ref", Component: UseRefPage },
+      { path: "/use-hook", Component: UseHookPage },
+      { path: "/use-effect", Component: UseEffectPage },
       { path: "/use-context", Component: UseContextPage },
+      { path: "/use-reducer", Component: UseReducerPage },
+      { path: "/custom-hooks", Component: CustomHooksPage },
+      { path: "/error-boundary", Component: ErrorBoundaryPage },
+      { path: "/use-optimistic", Component: UseOptimisticPage },
+      { path: "/use-action-state", Component: UseActionStatePage },
     ],
   },
 ]);
