@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme inline {
+    /* Backgrounds */
+    --color-bg: var(--bg);
+    --color-elev: var(--bg-elev);
+    --color-elev-2: var(--bg-elev-2);
+
+    /* Foregrounds */
+    --color-fg: var(--fg);
+    --color-fg-dim: var(--fg-dim);
+    --color-fg-faint: var(--fg-faint);
+
+    /* Borders */
+    --color-border: var(--border);
+    --color-border-strong: var(--border-strong);
+
+    /* Accents */
+    --color-accent: var(--accent);
+    --color-accent-dim: var(--accent-dim);
+    --color-accent-2: var(--accent-2);
+
+    /* Status */
+    --color-danger: var(--danger);
+    --color-ok: var(--ok);
+
+    /* Radii */
+    --radius-DEFAULT: var(--radius);
+    --radius-lg: var(--radius-lg);
+}
+
+:root {
+    --bg: #0e0e0e;
+    --bg-elev: #161616;
+    --bg-elev-2: #1c1c1c;
+    --fg: #ede9e0;
+    --fg-dim: #a39e93;
+    --fg-faint: #5e5a52;
+    --border: rgba(237, 233, 224, 0.08);
+    --border-strong: rgba(237, 233, 224, 0.16);
+    --accent: oklch(0.78 0.13 60);
+    --accent-dim: oklch(0.78 0.13 60 / 0.18);
+    --accent-2: oklch(0.78 0.1 200);
+    --danger: oklch(0.7 0.16 25);
+    --ok: oklch(0.78 0.13 150);
+
+    --radius: 6px;
+    --radius-lg: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hcard {
+    transition:
+        border-color 0.15s ease,
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.hcard:hover {
+    border-color: var(--accent);
+    background: var(--bg-elev-2);
+}
+
+.hcard__arrow {
+    transition:
+        transform 0.18s ease,
+        color 0.18s ease;
+}
+
+.hcard:hover .hcard__arrow {
+    transform: translate(2px, -2px);
+    color: var(--accent);
+}
+
+.landing__cardlabel {
+    grid-column: 1 / -1;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-faint);
+    margin-bottom: -6px;
+    margin-top: 6px;
+}
+
+.landing__text__1::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.page-anim {
+    animation: fadein 0.6s ease both;
+}

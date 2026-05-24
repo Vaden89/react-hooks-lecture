@@ -1,0 +1,25 @@
+.tok-kw {
+    color: oklch(0.78 0.13 320);
+}
+.tok-fn {
+    color: oklch(0.82 0.12 200);
+}
+.tok-str {
+    color: oklch(0.78 0.13 110);
+}
+.tok-num {
+    color: oklch(0.78 0.13 60);
+}
+.tok-com {
+    color: var(--fg-faint);
+    font-style: italic;
+}
+.tok-jsx {
+    color: oklch(0.78 0.1 30);
+}
+.tok-prop {
+    color: oklch(0.82 0.1 70);
+}
+.tok-punc {
+    color: var(--fg-dim);
+}

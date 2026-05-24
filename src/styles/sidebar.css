@@ -1,0 +1,65 @@
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar__brand-mark {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1.5px solid var(--accent);
+    position: relative;
+}
+
+.sidebar__brand-mark::before,
+.sidebar__brand-mark::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+}
+
+.sidebar__brand-mark::before {
+    transform: rotate(60deg) scaleY(0.4);
+}
+.sidebar__brand-mark::after {
+    transform: rotate(-60deg) scaleY(0.4);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--fg-dim);
+    transition:
+        background 0.12s ease,
+        color 0.12s ease;
+    font-size: 13px;
+}
+
+.nav-item:hover {
+    background: var(--bg-elev);
+    color: var(--fg);
+}
+
+.nav-item.is-active {
+    background: var(--bg-elev);
+    color: var(--fg);
+}
+
+.nav-item.is-active > span:first-of-type {
+    color: var(--accent);
+}
