@@ -15,4 +15,21 @@ function ChatRoom({ roomId }) {
     }, [roomId]); // Dependency array
 }`,
   },
+  {
+    for: "useRef",
+    code: `function RefDemo() {
+const containerRef = useRef(null);
+const counterRef = useRef(0);
+
+function handleClick() {
+counterRef.current = counterRef.current + 1;
+}
+
+return (
+<div ref={containerRef}>
+  <button onClick={handleClick}>Click me</button>
+</div>
+);
+}`,
+  },
 ];

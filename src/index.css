@@ -73,6 +73,34 @@ a {
     text-decoration: none;
 }
 
+li code {
+    font-size: 0.86em;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--fg);
+}
+
+input {
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.12s ease;
+}
+input:focus {
+    border-color: var(--accent);
+}
+input::placeholder {
+    color: var(--fg-faint);
+}
+
 .hcard {
     transition:
         border-color 0.15s ease,

@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import { PresentationLayout } from "./components/layout/PresentationLayout.tsx";
 import UseEffectPage from "./pages/presentation/UseEffectPage.tsx";
 import OverviewPage from "./pages/Overview.tsx";
+import { UseRefPage } from "./pages/presentation/UseRefPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, Component: OverviewPage },
       { path: "/use-effect", Component: UseEffectPage },
+      { path: "/use-ref", Component: UseRefPage },
     ],
   },
 ]);
