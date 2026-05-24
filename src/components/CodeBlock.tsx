@@ -33,7 +33,7 @@ const KEYWORDS = new Set([
   "typeof",
 ]);
 
-function tokenize(src) {
+function tokenize(src: string) {
   // Combined regex of token kinds, evaluated in priority order.
   const re =
     /(\/\/[^\n]*)|(\/\*[\s\S]*?\*\/)|("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`)|(\b\d+(?:\.\d+)?\b)|(\b[A-Za-z_$][\w$]*\b)|(=>|[{}()\[\];,.<>+\-*/%=!?:&|])/g;
