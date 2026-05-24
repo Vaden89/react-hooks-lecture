@@ -51,7 +51,7 @@ export function UseRefPage() {
         </div>
       </ContentSection>
 
-      <ContentSection index="01.B" title="Anatomy">
+      <ContentSection index="02.B" title="Anatomy">
         <CodeBlock
           filename="ChatRoom.jsx"
           code={CodeSnippets.find((s) => s.for === "useRef")?.code ?? ""}
@@ -73,7 +73,7 @@ export function UseRefPage() {
         </ul>
       </ContentSection>
 
-      <ContentSection index="01.C" title="Pitfalls">
+      <ContentSection index="02.C" title="Pitfalls">
         <Pitfalls
           cautions={[
             <p>
