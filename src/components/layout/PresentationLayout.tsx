@@ -83,6 +83,24 @@ export const PresentationLayout = () => {
                 />
               );
             })}
+
+          <div className="text-[12px] uppercase text-fg-faint pt-3.5 px-3 mb-1">
+            activity
+          </div>
+          {routePath
+            .filter((r) => r.cat === "activity")
+            .map((route, index) => {
+              const isActive = route.path === location.pathname;
+
+              return (
+                <NavLink
+                  idx={index + 10}
+                  hook={route}
+                  active={isActive}
+                  key={route.path}
+                />
+              );
+            })}
         </nav>
       </aside>
       <div className="overflow-y-auto scroll-smooth scrollbar">

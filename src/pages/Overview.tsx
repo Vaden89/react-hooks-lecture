@@ -69,6 +69,13 @@ export default function OverviewPage() {
           .map((h, i) => (
             <HookCard key={h.id} hook={h} idx={i + 1} />
           ))}
+
+        <div className="landing__cardlabel">— Class activity</div>
+        {routePath
+          .filter((h) => h.cat === "activity")
+          .map((h, i) => (
+            <HookCard key={h.id} hook={h} idx={i + 1} />
+          ))}
       </div>
     </div>
   );

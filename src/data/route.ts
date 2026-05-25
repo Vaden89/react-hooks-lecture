@@ -62,4 +62,11 @@ export const routePath = [
     cat: "react19",
     path: "/use-optimistic",
   },
+  {
+    id: "class-activity",
+    title: "Class activity",
+    tagline: "Build an optimistic product cart from a starter UI.",
+    cat: "activity",
+    path: "/class-activity",
+  },
 ];

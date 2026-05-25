@@ -14,6 +14,7 @@ import ErrorBoundaryPage from "./pages/presentation/ErrorBoundaryPage.tsx";
 import UseHookPage from "./pages/presentation/UseHookPage.tsx";
 import UseActionStatePage from "./pages/presentation/UseActionStatePage.tsx";
 import UseOptimisticPage from "./pages/presentation/UseOptimisticPage.tsx";
+import ClassActivityPage from "./pages/presentation/ClassActivityPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/error-boundary", Component: ErrorBoundaryPage },
       { path: "/use-optimistic", Component: UseOptimisticPage },
       { path: "/use-action-state", Component: UseActionStatePage },
+      { path: "/class-activity", Component: ClassActivityPage },
     ],
   },
 ]);
