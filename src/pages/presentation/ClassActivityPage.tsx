@@ -11,7 +11,7 @@ export default function ClassActivityPage() {
         <div className="text-xs tracking-widest uppercase text-accent">
           10 · Class activity
         </div>
-        <h1 className="font-medium -tracking-wide text-[44px] mb-4">
+        <h1 className="font-medium tracking-tight text-[44px] mb-4">
           Optimistic cart activity
         </h1>
         <p className="text-base text-fg-dim max-w-[68ch] mb-2.5 text-pretty">
@@ -20,7 +20,6 @@ export default function ClassActivityPage() {
           optimistic UI while the fake request is pending.
         </p>
       </div>
-
       <ContentSection
         index="10.A"
         title="Starter UI"
@@ -45,7 +44,6 @@ export default function ClassActivityPage() {
           </div>
         </div>
       </ContentSection>
-
       <ContentSection index="10.B" title="Student task">
         <Prose
           info={[
@@ -53,21 +51,33 @@ export default function ClassActivityPage() {
               title: "Fetch products",
               content:
                 "Call fetchProducts, keep loading and error states, then render the returned product list instead of the starter preview.",
+              completed: true,
+              footnote:
+                "The catalog calls fetchProducts on mount, renders loading and error states, and can reload the fake API.",
             },
             {
               title: "Create cart context",
               content:
                 "Use createContext and useContext so the cart counter can update from anywhere in the catalog.",
+              completed: true,
+              footnote:
+                "CartProvider owns the confirmed count while CartBadge and the action handler read it through useContext.",
             },
             {
               title: "Handle add action",
               content:
                 "Use useActionState around a form action that calls addToCart and returns a success or error message.",
+              footnote:
+                "Each product submits the shared useActionState action, which calls addToCart and returns success or error feedback.",
             },
+
             {
               title: "Make it optimistic",
               content:
                 "Use useOptimistic so the cart count increments immediately, then reconciles with the confirmed request.",
+              completed: true,
+              footnote:
+                "useOptimistic increments the visible cart count immediately, then reconciles with the confirmed count after the request settles.",
             },
           ]}
         />
