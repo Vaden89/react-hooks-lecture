@@ -18,11 +18,14 @@ const variantClass: Record<Variant, string> = {
 export const Button = ({
   variant = "default",
   children,
+  className,
   ...props
 }: ButtonProps) => {
   return (
     <button
-      className={["btn", variantClass[variant]].filter(Boolean).join(" ")}
+      className={["btn", variantClass[variant], className]
+        .filter(Boolean)
+        .join(" ")}
       {...props}
     >
       {children}

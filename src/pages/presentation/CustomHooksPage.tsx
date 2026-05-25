@@ -6,7 +6,7 @@ import { CodeSnippets } from "../../data/code";
 
 export default function CustomHooksPage() {
   return (
-    <div className="w-full grid h-dvh overflow-y-auto p-[80px_60px_120px] max-w-6xl page-anim">
+    <div className="w-full grid overflow-y-auto p-[80px_60px_120px] max-w-6xl page-anim">
       <div>
         <div className="text-xs tracking-widest uppercase text-accent">
           03 · Composition

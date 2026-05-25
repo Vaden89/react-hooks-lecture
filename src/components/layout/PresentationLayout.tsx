@@ -98,7 +98,7 @@ export const PresentationLayout = () => {
             </span>
           </div>
         </header>
-        <div className="px-2">
+        <div className="w-full flex items-center justify-center px-2">
           <Outlet />
         </div>
       </div>

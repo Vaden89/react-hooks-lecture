@@ -82,7 +82,7 @@ li code {
     color: var(--fg);
 }
 
-input {
+input:not([type="checkbox"]) {
     background: var(--bg);
     border: 1px solid var(--border-strong);
     border-radius: 6px;

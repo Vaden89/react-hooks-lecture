@@ -5,7 +5,7 @@ import { Button } from "../components/common/Button";
 
 export default function OverviewPage() {
   return (
-    <div className="grid h-dvh overflow-y-auto page-anim p-[80px_60px_120px] max-w-6xl">
+    <div className="grid overflow-y-auto page-anim p-[80px_60px_120px] max-w-6xl">
       <div className="grid grid-cols-3 gap-16 items-end border-b border-border pb-16">
         <div className="col-span-2">
           <div className="text-xs  tracking-[0.16em] uppercase text-accent mb-5 flex items-center gap-2.5 landing__text__1">
